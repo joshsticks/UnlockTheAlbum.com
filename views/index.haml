@@ -4,21 +4,47 @@
 		%meta{ :charset => "utf-8"}
 		%title Unlock The Album
 		%meta{ :name => "description", :content => ""}
-		%meta{ :name => "author", :content => ""}
+		%meta{ :name => "author", :content => "Josh Stickles	"}
 		%link{ :href => "/bootstrap/css/bootstrap.css", :type => "text/css", :rel => "stylesheet" }
 		%link{ :href => "/bootstrap/css/bootstrap-responsive.css", :type => "text/css", :rel => "stylesheet" }
 		
 	%body
-		.navbar
+		%div{ :class => "navbar navbar-fixed-top"}
 			.navbar-inner
 				.container
 					%a{ :class => "brand", :href => "#"} Unlock The Album
-					.nav-collapse
-						%ul{ :class => "nav"}
-							%li
-								%a{ :href => "#about"} About
-							%li 
-								%a{ :href => "#contact"} Contact
+					
+					%ul{ :class => "nav"}
+						%li{ :class => "active"}
+							%a{ :href => "#home"} Home
+						%li
+							%a{ :href => "#about"} About us
+						%li
+							%a{ :href => "#blog"} Blog
+							
+					%form{ :class => "navbar-search pull-left"}
+						%input{ :type => "text", :class => "search-query span2", :placeholder => "Search"}
+					
+					%ul{ :class => "nav pull-right"}	
+						%li
+							%button{ :href => "#login", :class => "btn btn-primary"} Login
+							%button{ :href => "#signup", :class => "btn btn-primary"} Sign Up
+		.container-fixed
+			.hero-unit
+				%h1 Hey, indie music lovers!
+				%p Should scroll albums here.
+		.container-fluid
+			.row-fluid
+				.span3
+				.span9
+			%hr
+			%footer
+				%p 
+					%a{ :href => "#about"} About us
+					|
+					%a{ :href => "mailto:sticklesjb@gmail.com"} Contact
+				%p © Josh Stickles 2012
+			
 	
 	%script{ :type => "text/javascript", :src  => "http://code.jquery.com/jquery-1.7.1.min.js"}
 	%script{ :type => "text/javascript", :src => "/bootstrap/js/bootstrap.js"}
