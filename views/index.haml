@@ -5,7 +5,7 @@
 		%title Unlock The Album
 		%meta{ :name => "description", :content => ""}
 		%meta{ :name => "author", :content => "Josh Stickles	"}
-		%link{ :href => "/bootstrap/css/bootstrap.css", :type => "text/css", :rel => "stylesheet" }
+		%link{ :href => "/bootstrap/css/bootstrap.min.css", :type => "text/css", :rel => "stylesheet" }
 		%link{ :href => "/bootstrap/css/bootstrap-responsive.css", :type => "text/css", :rel => "stylesheet" }
 		
 	%body
@@ -21,22 +21,94 @@
 							%a{ :href => "#about"} About us
 						%li
 							%a{ :href => "#blog"} Blog
-							
-					%form{ :class => "navbar-search pull-left"}
-						%input{ :type => "text", :class => "search-query span2", :placeholder => "Search"}
+						%form{ :class => "navbar-search pull-left"}
+							%input{ :type => "text", :class => "search-query span2", :placeholder => "Search"}
+					%ul{ :class => "nav pull-right"}
+						%li{ :class => "dropdown"}
+							%a{ :href => "#", :class => "dropdown-toggle", 
+								'data-toggle' => "dropdown"}
+								%i{ :class => "icon-user icon-white"} 
+								Login or Sign Up
+								%b{ :class => "caret"}
+							%ul{ :class => "dropdown-menu"}
+								%li
+									%a Login
+								%li{ :class => "divider"}
+								%li
+									%a Sign Up
 					
-					%ul{ :class => "nav pull-right"}	
-						%li
-							%button{ :href => "#login", :class => "btn btn-primary"} Login
-							%button{ :href => "#signup", :class => "btn btn-primary"} Sign Up
-		.container-fixed
+		.container-fluid
 			.hero-unit
 				%h1 Hey, indie music lovers!
-				%p Should scroll albums here.
+				%p Check out these great new albums from our fave indie bands. Listen, and then pay what you want for these great albums.
+				.row-fluid
+					%li{ :class => "span3"}
+						%div{ :class => "thumbnail"}
+							%img{ :src => "http://placehold.it/260x180", :alt => ""}
+							%h3 Album h
+					%li{ :class => "span3"}
+						%div{ :class => "thumbnail"}
+							%img{ :src => "http://placehold.it/260x180", :alt => ""}
+							%h3 Album i
+					%li{ :class => "span3"}
+						%div{ :class => "thumbnail"}
+							%img{ :src => "http://placehold.it/260x180", :alt => ""}
+							%h3 Album j
+					%li{ :class => "span3"}
+						%div{ :class => "thumbnail"}
+							%img{ :src => "http://placehold.it/260x180", :alt => ""}
+							%h3 Album k
+					%div{ :class => "btn-toolbar pull-right"}
+						%div{ :class => "btn-group"}
+							%a{ :class => "btn btn-mini btn-inverse"}
+								%i{ :class => "icon-chevron-left"}
+								Prev
+							%a{ :class => "btn btn-mini btn-inverse"}
+								Next
+								%i{ :class => "icon-chevron-right"}
+				
 		.container-fluid
 			.row-fluid
-				.span3
-				.span9
+				.span2
+					%div{ :class => "well sidebar-nav"}
+						%ul{ :class => "nav nav-list"}
+							%li{ :class => "header"} 
+								%h2 Browse
+							%li{ :class => "header"} 
+								%h3 Genres
+							%li 
+								%a Rock
+							%li 
+								%a Rap
+							%li
+								%a Techno
+							%li{ :class => "header"} 
+								%h3 Tags
+							%li
+								%a Chill
+							%li
+								%a Angry
+							%li
+								%a Depression
+							%li{ :clase => "header"}
+								%h3 Local Bands
+							%li
+								%a Find 'em
+							%li{ :close => "header"}
+								%h3 Rando
+							%li
+								%a Lay it on me
+									
+								
+				.span6
+					%h2 Welcome to Unlock The Album!
+					%p The best place to discover and support indie bands. Check out bands in genres and tags you like, nearby your location or just something random. Pay what you like for their album and get the tracks as the band's goals are met. Share your purchases on Facebook and Twitter to help spread the word about the albums you like. Find great music and feel good about spreading the word for these awesome bands.
+				.span4
+					%h2 Join the community
+					%a{ :class => "btn btn-success "} Create your account
+				.span6
+					%h2 Artists wanted...
+					%p Tired of only selling a handful of albums after a gig? We're here to help. Putting your album up on Unlock The Album is a breeze. Just upload your tracks, set up your goals, and then you're ready to get sellin'. 
 			%hr
 			%footer
 				%p 
@@ -44,7 +116,10 @@
 					|
 					%a{ :href => "mailto:sticklesjb@gmail.com"} Contact
 				%p © Josh Stickles 2012
+				
 			
 	
-	%script{ :type => "text/javascript", :src  => "http://code.jquery.com/jquery-1.7.1.min.js"}
+	%script{ :type => "text/javascript", :src => "http://code.jquery.com/jquery-1.7.1.min.js"}
 	%script{ :type => "text/javascript", :src => "/bootstrap/js/bootstrap.js"}
+	%script{ :type => "text/javascript", :src => "/bootstrap/js/bootstrap-dropdown.js"}
+	%script{ :type => "text/javascript", :src => "application.js"}
