@@ -21,3 +21,15 @@ we take maybe a 10-30% cut of each sale.
 landing page should have featured artists etc.
 music recommendations based on taggings likes etc. friends likes, friends bands.
 find a local would be a great feature, see local band who have an album promo out.
+
+
+coffeescript needs to be precompiled into public/js/ with a rake task or similar.
+mongodb local needs to be installed and setup !TOP PRI!
+first thing that should be made after auth is functioning is the blog...so that work can be blogged
+after that should focus on user account fleshing out.....band relationships to user
+band "profiles" then should be next
+then band relationship to an album
+and then band relationship to "promo" and "promo" relationship to 1..n of that band's albums
+once this is done. flesh out album -> songs
+then storing mp3
+playing mp3
