@@ -1,0 +1,13 @@
+.container-fluid
+	.row-fluid
+		%div{:class => "span4"}
+			%h1 Sign Up
+			%form{:class => "well", :action => "/signup", :method => "post"}
+				%label{:for => "user_email"} Email
+				%input{:id => "user_email", :name => "user[email]", :type => "text"}
+				%label{:for => "user_password"} Password
+				%input{:id => "user_password", :name => "user[password]", :type => "password" }
+				%label{:for => "user_password_confirmation"} Confirm Password
+				%input{:id => "user_password_confirmation", :name => "user[password_confirmation]", :type => "password" }
+				%input{:class => "btn-primary", :value => "Sign up", :type => "submit" }
+				%a{:href => "/login"} Login

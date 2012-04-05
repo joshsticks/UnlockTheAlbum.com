@@ -1,0 +1,21 @@
+!!! 5
+%html
+	%head
+		%meta{ :charset => "utf-8"}
+		%title Unlock The Album
+		%meta{ :name => "description", :content => ""}
+		%meta{ :name => "author", :content => "Josh Stickles	"}
+		%link{ :href => "/bootstrap/css/bootstrap.min.css", :type => "text/css", :rel => "stylesheet" }
+		%link{ :href => "/bootstrap/css/bootstrap-responsive.css", :type => "text/css", :rel => "stylesheet" }
+		%link{ :href => "/css/application.css", :type => "text/css", :rel => "stylesheet"}
+		
+	%body
+		= haml :navbar, :layout => false
+		= yield
+		%hr
+		= haml :footer, :layout => false
+		
+	%script{ :type => "text/javascript", :src => "http://code.jquery.com/jquery-1.7.1.min.js"}
+	%script{ :type => "text/javascript", :src => "/bootstrap/js/bootstrap.js"}
+	%script{ :type => "text/javascript", :src => "/bootstrap/js/bootstrap-dropdown.js"}
+	%script{ :type => "text/javascript", :src => "application.js"}	

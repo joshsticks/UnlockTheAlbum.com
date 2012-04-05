@@ -1,0 +1,11 @@
+.container-fluid
+	.row-fluid
+		%div{:class => "span4"}
+			%h1 Login
+			%form{:class =>"well", :action => "/login", :method => "post"}
+				%label{:for => "user_email'"} Email
+				%input{:id => "user_email", :name => "email", :type => "text"}
+				%label{:for => "user_password"} Password
+				%input{:id => "user_password", :name => "password", :type => "password"}
+				%button{:class => "btn-primary", :type => "submit", :value => "Login" } Login
+				%a{:href => "/signup"} Sign up
