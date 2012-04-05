@@ -18,6 +18,7 @@
 						%input{ :type => "text", :class => "search-query span2", :placeholder => "Search"}
 				%ul{ :class => "nav pull-right"}
 					%li{ :class => "dropdown"}
+<<<<<<< HEAD
 						- if logged_in?
 							%a{ :href => "#", :class => "dropdown-toggle", 
 								'data-toggle' => "dropdown"}
@@ -42,3 +43,15 @@
 								%li{ :class => "divider"}
 								%li
 									%a{ :href => "signup"} Sign up
+=======
+						%a{ :href => "#", :class => "dropdown-toggle", 'data-toggle' => "dropdown"}
+							%i{ :class => "icon-user icon-white"} 
+							Login or Sign up
+							%b{ :class => "caret"}
+						%ul{ :class => "dropdown-menu"}
+							%li
+								%a{:href => "login"} Login
+							%li{ :class => "divider"}
+							%li
+								%a{ :href => "signup"} Sign up
+>>>>>>> adjusting since move to partial makes long lines not an issue
