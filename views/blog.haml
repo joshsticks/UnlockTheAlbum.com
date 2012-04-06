@@ -1,0 +1,24 @@
+.container
+	.row
+		%div{:class => "span9 offset3"}
+			%header{:class => "jumbotron subhead"}
+				%h1 Unlock The Blog
+			- if current_user.email == 'sticklesjb@gmail.com'
+				%section
+					.page-header
+						%h1 New Post
+					.row
+						.span4
+							%form{:class => "well form-blog-post", :action => "/blog", :method => "post"}
+								%label{:for => "title"} Title
+								%input{:id => "title", :name => "post[title]", :type => "text" }
+								%label{:for => "content"} Content
+								%textarea{:class => "input-blog-post", :id => "content", :name => "post[content]", :rows => "6"}
+								%input{:class => "btn-primary", :value => "Post", :type => "submit" }
+			%section
+				.row
+					.span4
+						%h1= @posts[0].title
+						%p= @posts[0].content
+						
+			

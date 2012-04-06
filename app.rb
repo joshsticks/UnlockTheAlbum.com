@@ -1,9 +1,11 @@
+$: << File.dirname(__FILE__) + "/models"
 require 'rubygems'
 require 'sinatra'
 require 'haml'
 require 'coffee-script'
 require 'mongoid'
 require "sinatra-authentication"
+require 'blog'
   
 #if you change things to do with the app and it's running then it won't be in effect, dur
 set :sinatra_authentication_view_path, Pathname(__FILE__).dirname.expand_path + "views/"
@@ -26,4 +28,15 @@ end
 
 get '/application.js' do
   coffee :application
+end
+
+get '/blog' do
+  @posts = Post.all
+  haml :blog
+end
+
+post '/blog' do
+  login_required
+  redirect "/blog" unless current_user.email == 'sticklesjb@gmail.com'
+  @post = Post.create!(params[:post])
 end
